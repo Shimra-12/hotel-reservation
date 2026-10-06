@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hotel</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../styles/styles.css">
+    </head>
+
+    <body>
+        <!--Header: STARTS-->
+        <div class="top-header">
+        <div class="container d-flex justify-content-end">
+            <a href="../signin.html">Sign In</a>
+            <a href="../signup.html">Sign Up</a>
+        </div>
+        </div>
+        <!--Header: ENDS-->
+
+        <!--Navbar: STARTS-->
+        <nav class="navbar navbar-expand-lg main-navbar py-3">
+            <div class="container">
+                <!--Hotel Name-->
+                <a class="navbar-brand" href="../index.html">Hotel</a>
+
+                <!--Toggler for mobile view-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!--Options-->
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="roomres.html">Room Reservation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="restaurantres.html">Restaurant Reservation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--Navbar: ENDS-->
+        
+        <!--Body: STARTS-->
+        <section class="py-5">
+        <div class="container">
+
+            <!--Heading-->
+            <div class="text-center mb-5">
+            <h1 style="color: #1a1a2e; font-weight: 700;">Our Services</h1>
+            <p style="color: #555;">Everything you need for a comfortable, memorable stay</p>
+            </div>
+
+            <!-- Book Hotel for Events -->
+            <div class="p-5 rounded text-center mb-5" style="background-color: #1a1a2e;">
+            <h2 style="color: #ffffff;">Planning Your Wedding?</h2>
+            <p style="color: #dddddd; max-width: 600px; margin: 0 auto 20px;">
+                Book the entire hotel for your special day. From weddings to corporate functions,
+                our beachside venue can be reserved exclusively for your event.
+            </p>
+            <button type="button" class="btn btn-lg" style="background-color: #d4af37; color: #1a1a2e; font-weight: 600;" data-bs-toggle="modal" data-bs-target="#bookEventModal">
+                Book Now
+            </button>
+            </div>
+
+            <!-- Booking Modal -->
+            <div class="modal fade" id="bookEventModal" tabindex="-1" aria-labelledby="bookEventModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                <div class="modal-header" style="background-color: #1a1a2e;">
+                    <h5 class="modal-title" style="color: #ffffff;" id="bookEventModalLabel">Book Hotel for an Event</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                    <div class="mb-3">
+                        <label class="form-label">Full Name</label>
+                        <input type="text" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Email Address</label>
+                        <input type="email" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Phone Number</label>
+                        <input type="tel" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Preferred Event Date</label>
+                        <input type="date" class="form-control" required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Number of Guests</label>
+                        <input type="number" class="form-control" min="1">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Event Type</label>
+                        <select class="form-select">
+                        <option>Wedding</option>
+                        <option>Corporate Function</option>
+                        <option>Birthday / Private Party</option>
+                        <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Additional Notes</label>
+                        <textarea class="form-control" rows="3"></textarea>
+                    </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Check Availability</button>
+                    <button type="button" class="btn" style="background-color: #1a1a2e; color: #ffffff;">Book</button>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <!-- Other Services -->
+            <div class="text-center mb-4">
+            <h2 style="color: #1a1a2e;">More Services</h2>
+            </div>
+
+            <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="text-center p-3">
+                <img src="../images/beachaccess.webp" alt="Beach access" class="img-fluid rounded mb-3" style="height: 180px; object-fit: cover; border-radius: 12px 12px 0 0;">
+                <h5 style="color: #1a1a2e;">Beach Access</h5>
+                <p style="color: #555;">Direct access to our private beach, complete with loungers and umbrellas.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="text-center p-3">
+                <img src="../images/swimmingpool.webp" alt="Swimming pool" class="img-fluid rounded mb-3" style="height: 180px; object-fit: cover; border-radius: 12px 12px 0 0;">
+                <h5 style="color: #1a1a2e;">Swimming Pool</h5>
+                <p style="color: #555;">A relaxing pool area open to all guests throughout the day.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="text-center p-3">
+                <img src="../images/inroomdining.webp" alt="In-room dining" class="img-fluid rounded mb-3" style="height: 180px; object-fit: cover; border-radius: 12px 12px 0 0;">
+                <h5 style="color: #1a1a2e;">In-Room Dining / Room Service</h5>
+                <p style="color: #555;">Enjoy freshly prepared meals delivered right to your room.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="text-center p-3">
+                <img src="../images/resnbar.webp" alt="Restaurant and bar" class="img-fluid rounded mb-3" style="height: 180px; object-fit: cover; border-radius: 12px 12px 0 0;">
+                <h5 style="color: #1a1a2e;">Restaurant & Bar</h5>
+                <p style="color: #555;">
+                    Dine with us or bring your own bottle &mdash; BYOB is welcome, corkage terms
+                    available at the restaurant.
+                </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="text-center p-3">
+                <img src="../images/freewifi.webp" alt="Free wifi" class="img-fluid rounded mb-3" style="height: 180px; object-fit: cover; border-radius: 12px 12px 0 0;">
+                <h5 style="color: #1a1a2e;">Free Wi-Fi</h5>
+                <p style="color: #555;">Stay connected with complimentary high-speed Wi-Fi throughout the hotel.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="text-center p-3">
+                <img src="../images/laundry.webp" alt="Laundry service" class="img-fluid rounded mb-3" style="height: 180px; object-fit: cover; border-radius: 12px 12px 0 0;">
+                <h5 style="color: #1a1a2e;">Laundry Services</h5>
+                <p style="color: #555;">Washing and pressing services available for guests during their stay.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="text-center p-3">
+                <img src="../images/housekeeping.webp" alt="Housekeeping" class="img-fluid rounded mb-3" style="height: 180px; object-fit: cover; border-radius: 12px 12px 0 0;">
+                <h5 style="color: #1a1a2e;">Housekeeping</h5>
+                <p style="color: #555;">Daily housekeeping to keep your room fresh and comfortable throughout your stay.</p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="text-center p-3">
+                <img src="../images/drontdesk.jpg" alt="24/7 front desk" class="img-fluid rounded mb-3" style="height: 180px; object-fit: cover; border-radius: 12px 12px 0 0;">
+                <h5 style="color: #1a1a2e;">24/7 Front Desk</h5>
+                <p style="color: #555;">Our front desk team is available around the clock to assist with any request.</p>
+                </div>
+            </div>
+
+            </div>
+
+        </div>
+        </section>
+        <!--Body: ENDS-->
+
+        <!--Footer: STARTS -->
+        <footer style="background-color: #1a1a2e; padding: 30px 0;">
+            <div class="container text-center">
+                <div class="mb-2">
+                <a href="../footer/abtus.html" style="color: #f5f5f5; text-decoration: none;">About Us</a>
+                </div>
+                <div class="mb-2">
+                <a href="../footer/contactus.html" style="color: #f5f5f5; text-decoration: none;">Contact Us</a>
+                </div>
+                <div class="mb-2">
+                <a href="../footer/faqs.html" style="color: #f5f5f5; text-decoration: none;">FAQs</a>
+                </div>
+                <div class="mb-2">
+                <a href="../footer/privacypolicy.html" style="color: #f5f5f5; text-decoration: none;">Privacy Policy</a>
+                </div>
+                <div class="mb-3">
+                <a href="../footer/termsncond.html" style="color: #f5f5f5; text-decoration: none;">Terms and Conditions</a>
+                </div>
+                <p style="color: #cccccc; font-size: 13px; margin-bottom: 0;">
+                &copy; Shimra Ahamed 2026
+                </p>
+            </div>
+        </footer>
+        <!--Footer: ENDS -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+</html>

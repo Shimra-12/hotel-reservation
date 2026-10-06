@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hotel</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../styles/styles.css">
+    </head>
+
+    <body>
+        <!--Header: STARTS-->
+        <div class="top-header">
+        <div class="container d-flex justify-content-end">
+            <a href="../signin.html">Sign In</a>
+            <a href="../signup.html">Sign Up</a>
+        </div>
+        </div>
+        <!--Header: ENDS-->
+
+        <!--Navbar: STARTS-->
+        <nav class="navbar navbar-expand-lg main-navbar py-3">
+            <div class="container">
+                <!--Hotel Name-->
+                <a class="navbar-brand" href="../index.html">Hotel</a>
+
+                <!--Toggler for mobile view-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!--Options-->
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="../navbar/roomres.html">Room Reservation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../navbar/restaurantres.html">Restaurant Reservation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../navbar/services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="../navbar/events.html">Events</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--Navbar: ENDS-->
+
+        <!--Body: STARTS-->
+        <section class="py-5">
+        <div class="container">
+
+            <!--Heading-->
+            <div class="text-center mb-5">
+            <h1 style="color: #1a1a2e; font-weight: 700;">Frequently Asked Questions</h1>
+            <p style="color: #555;">Everything you need to know before your stay</p>
+            </div>
+
+            <div class="row justify-content-center">
+            <div class="col-md-8">
+
+                <div class="accordion" id="faqAccordion">
+
+                <!-- Question 1 -->
+                <div class="accordion-item mb-3">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                        What time is check-in and check-out?
+                    </button>
+                    </h2>
+                    <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Check-in begins at 2:00 PM and check-out is by 12:00 PM (noon). If you need
+                        an early check-in or late check-out, just let our front desk know in advance
+                        and we'll do our best to accommodate you.
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Question 2 -->
+                <div class="accordion-item mb-3">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                        Is the hotel located directly on the beach?
+                    </button>
+                    </h2>
+                    <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Yes, our hotel sits right on the beachfront, just a short walk from your room
+                        to the sand. Many of our rooms also offer direct sea views.
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Question 3 -->
+                <div class="accordion-item mb-3">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                        Do you offer airport pickup?
+                    </button>
+                    </h2>
+                    <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Yes, we offer airport pickup and drop-off for our guests at an additional cost.
+                        Simply share your flight details with us in advance through the reservation
+                        form or by contacting our front desk.
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Question 4 -->
+                <div class="accordion-item mb-3">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                        Can I make restaurant reservations without staying at the hotel?
+                    </button>
+                    </h2>
+                    <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Absolutely. Our restaurant is open to outside guests as well. You can book a
+                        table through our Restaurant Reservation page or by calling us directly.
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Question 5 -->
+                <div class="accordion-item mb-3">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq5">
+                        Is the hotel suitable for families with children?
+                    </button>
+                    </h2>
+                    <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Yes, we welcome families and offer family-friendly rooms, a kids' menu at the
+                        restaurant, and a safe beach area for children to enjoy under supervision.
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Question 6 -->
+                <div class="accordion-item mb-3">
+                    <h2 class="accordion-header">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq6">
+                        What is your cancellation policy?
+                    </button>
+                    </h2>
+                    <div id="faq6" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                    <div class="accordion-body">
+                        Reservations can be cancelled free of charge up to 48 hours before check-in.
+                        Cancellations made after this period may be subject to a one-night charge.
+                        Please see our Terms and Conditions for full details.
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
+        <!--Body: ENDS-->
+
+        <!--Footer: STARTS -->
+        <footer style="background-color: #1a1a2e; padding: 30px 0;">
+            <div class="container text-center">
+                <div class="mb-2">
+                <a href="abtus.html" style="color: #f5f5f5; text-decoration: none;">About Us</a>
+                </div>
+                <div class="mb-2">
+                <a href="contactus.html" style="color: #f5f5f5; text-decoration: none;">Contact Us</a>
+                </div>
+                <div class="mb-2">
+                <a href="faqs.html" style="color: #f5f5f5; text-decoration: none;">FAQs</a>
+                </div>
+                <div class="mb-2">
+                <a href="privacypolicy.html" style="color: #f5f5f5; text-decoration: none;">Privacy Policy</a>
+                </div>
+                <div class="mb-3">
+                <a href="termsncond.html" style="color: #f5f5f5; text-decoration: none;">Terms and Conditions</a>
+                </div>
+                <p style="color: #cccccc; font-size: 13px; margin-bottom: 0;">
+                &copy; Shimra Ahamed 2026
+                </p>
+            </div>
+        </footer>
+        <!--Footer: ENDS -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+</html>

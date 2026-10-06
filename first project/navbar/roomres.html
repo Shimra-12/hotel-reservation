@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Hotel</title>
+        <!-- Bootstrap CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="../styles/styles.css">
+    </head>
+
+    <body>
+        <!--Header: STARTS-->
+        <div class="top-header">
+        <div class="container d-flex justify-content-end">
+            <a href="../signin.html">Sign In</a>
+            <a href="../signup.html">Sign Up</a>
+        </div>
+        </div>
+        <!--Header: ENDS-->
+
+        <!--Navbar: STARTS-->
+        <nav class="navbar navbar-expand-lg main-navbar py-3">
+            <div class="container">
+                <!--Hotel Name-->
+                <a class="navbar-brand" href="../index.html">Hotel</a>
+
+                <!--Toggler for mobile view-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMenu">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!--Options-->
+                <div class="collapse navbar-collapse" id="navbarMenu">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="roomres.html">Room Reservation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="restaurantres.html">Restaurant Reservation</a></li>
+                        <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                        <li class="nav-item"><a class="nav-link" href="events.html">Events</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--Navbar: ENDS-->
+
+        <!--Body: STARTS-->
+        <section class="py-5">
+        <div class="container">
+
+            <!--Heading-->
+            <div class="text-center mb-5">
+            <h1 style="color: #1a1a2e; font-weight: 700;">Room Reservation</h1>
+            <p style="color: #555;">Select a room type to view details and book your stay</p>
+            </div>
+
+            <!-- Room Type Tabs -->
+            <ul class="nav nav-pills justify-content-center mb-5" id="roomTypeTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <button class="nav-link active" style="color: #1a1a2e;" data-bs-toggle="tab" data-bs-target="#vipRoom" type="button">
+                VIP Room
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" style="color: #1a1a2e;" data-bs-toggle="tab" data-bs-target="#singleRoom" type="button">
+                Single Room
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" style="color: #1a1a2e;" data-bs-toggle="tab" data-bs-target="#doubleRoom" type="button">
+                Double Room
+                </button>
+            </li>
+            <li class="nav-item" role="presentation">
+                <button class="nav-link" style="color: #1a1a2e;" data-bs-toggle="tab" data-bs-target="#tripleRoom" type="button">
+                Triple Room
+                </button>
+            </li>
+            </ul>
+
+            <div class="tab-content">
+
+            <!-- VIP ROOM -->
+            <div class="tab-pane fade show active" id="vipRoom">
+                <div class="row">
+
+                <!-- Image Slider -->
+                <div class="col-md-6 mb-4">
+                    <div id="vipCarousel" class="carousel slide shadow rounded" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                        <img src="../images/viproom1.webp" class="d-block w-100" alt="VIP room image 1" style="height: 350px; object-fit: cover;">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="../images/viproom2.webp" class="d-block w-100" alt="VIP room image 2" style="height: 350px; object-fit: cover;">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="../images/viproom3.webp" class="d-block w-100" alt="VIP room image 3" style="height: 350px; object-fit: cover;">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#vipCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#vipCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                    </div>
+                </div>
+
+                <!-- Details -->
+                <div class="col-md-6 mb-4">
+                    <h3 style="color: #1a1a2e;">VIP Room</h3>
+                    <p style="color: #d4af37; font-weight: 700; font-size: 20px;">2 rooms available</p>
+                    <p style="color: #555;">
+                    Our most luxurious rooms, offering a private sea-facing balcony, a spacious king
+                    bed, and premium furnishings. Ideal for guests seeking the very best of comfort
+                    and beachside views.
+                    </p>
+                    <ul style="color: #555;">
+                    <li>Sleeps up to 2 guests</li>
+                    <li>King-size bed</li>
+                    <li>Sea-facing private balcony</li>
+                    <li>Air conditioning &amp; mini bar</li>
+                    </ul>
+
+                    <h6 style="color: #1a1a2e; margin-top: 20px;">Add Services</h6>
+                    <div class="row">
+                    <div class="col-6">
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="vipService1"><label class="form-check-label" for="vipService1">Beach Access</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="vipService2"><label class="form-check-label" for="vipService2">Swimming Pool</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="vipService3"><label class="form-check-label" for="vipService3">Room Service</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="vipService4"><label class="form-check-label" for="vipService4">Restaurant &amp; Bar</label></div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="vipService5"><label class="form-check-label" for="vipService5">Free Wi-Fi</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="vipService6"><label class="form-check-label" for="vipService6">Laundry Services</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="vipService7"><label class="form-check-label" for="vipService7">Housekeeping</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="vipService8"><label class="form-check-label" for="vipService8">24/7 Front Desk</label></div>
+                    </div>
+                    </div>
+                </div>
+
+                </div>
+
+                <!-- Booking Form -->
+                <div class="row justify-content-center mt-3">
+                <div class="col-md-10 p-4 rounded shadow">
+                    <div class="row g-3 align-items-end">
+                    <div class="col-md-3">
+                        <label class="form-label">Check-In</label>
+                        <input type="date" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Check-Out</label>
+                        <input type="date" class="form-control">
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Guests</label>
+                        <input type="number" class="form-control" min="1" value="1">
+                    </div>
+                    <div class="col-md-2">
+                        <button type="button" class="btn w-100" style="background-color: #1a1a2e; color: #ffffff;">Check Availability</button>
+                    </div>
+                    <div class="col-md-2">
+                        <button type="button" class="btn w-100" style="background-color: #d4af37; color: #1a1a2e; font-weight: 600;">Book Now</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+            </div>
+
+            <!-- SINGLE ROOM -->
+            <div class="tab-pane fade" id="singleRoom">
+                <div class="row">
+
+                <div class="col-md-6 mb-4">
+                    <div id="singleCarousel" class="carousel slide shadow rounded" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                        <img src="../images/singleroom1.webp" class="d-block w-100" alt="Single room image 1" style="height: 350px; object-fit: cover;">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="../images/singleroom2.webp" class="d-block w-100" alt="Single room image 2" style="height: 350px; object-fit: cover;">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="../images/singleroom3.jpg" class="d-block w-100" alt="Single room image 3" style="height: 350px; object-fit: cover;">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#singleCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#singleCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <h3 style="color: #1a1a2e;">Single Room</h3>
+                    <p style="color: #d4af37; font-weight: 700; font-size: 20px;">3 rooms available</p>
+                    <p style="color: #555;">
+                    A cozy room designed for the solo traveler, offering all the comforts needed for
+                    a relaxing beachside stay at a comfortable price.
+                    </p>
+                    <ul style="color: #555;">
+                    <li>Sleeps 1 guest</li>
+                    <li>Single bed</li>
+                    <li>Garden or partial sea view</li>
+                    <li>Air conditioning</li>
+                    </ul>
+
+                    <h6 style="color: #1a1a2e; margin-top: 20px;">Add Services</h6>
+                    <div class="row">
+                    <div class="col-6">
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="singleService1"><label class="form-check-label" for="singleService1">Beach Access</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="singleService2"><label class="form-check-label" for="singleService2">Swimming Pool</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="singleService3"><label class="form-check-label" for="singleService3">Room Service</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="singleService4"><label class="form-check-label" for="singleService4">Restaurant &amp; Bar</label></div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="singleService5"><label class="form-check-label" for="singleService5">Free Wi-Fi</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="singleService6"><label class="form-check-label" for="singleService6">Laundry Services</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="singleService7"><label class="form-check-label" for="singleService7">Housekeeping</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="singleService8"><label class="form-check-label" for="singleService8">24/7 Front Desk</label></div>
+                    </div>
+                    </div>
+                </div>
+
+                </div>
+
+                <div class="row justify-content-center mt-3">
+                <div class="col-md-10 p-4 rounded shadow">
+                    <div class="row g-3 align-items-end">
+                    <div class="col-md-3">
+                        <label class="form-label">Check-In</label>
+                        <input type="date" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Check-Out</label>
+                        <input type="date" class="form-control">
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Guests</label>
+                        <input type="number" class="form-control" min="1" value="1">
+                    </div>
+                    <div class="col-md-2">
+                        <button type="button" class="btn w-100" style="background-color: #1a1a2e; color: #ffffff;">Check Availability</button>
+                    </div>
+                    <div class="col-md-2">
+                        <button type="button" class="btn w-100" style="background-color: #d4af37; color: #1a1a2e; font-weight: 600;">Book Now</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+            </div>
+
+            <!-- DOUBLE ROOM -->
+            <div class="tab-pane fade" id="doubleRoom">
+                <div class="row">
+
+                <div class="col-md-6 mb-4">
+                    <div id="doubleCarousel" class="carousel slide shadow rounded" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                        <img src="../images/doubleroom1.webp" class="d-block w-100" alt="Double room image 1" style="height: 350px; object-fit: cover;">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="../images/doubleroom2.jpg" class="d-block w-100" alt="Double room image 2" style="height: 350px; object-fit: cover;">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="../images/doubleroom3.webp" class="d-block w-100" alt="Double room image 3" style="height: 350px; object-fit: cover;">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#doubleCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#doubleCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <h3 style="color: #1a1a2e;">Double Room</h3>
+                    <p style="color: #d4af37; font-weight: 700; font-size: 20px;">3 rooms available</p>
+                    <p style="color: #555;">
+                    Spacious and comfortable, our Double Rooms are perfect for couples or friends
+                    traveling together who want a bit more room to relax.
+                    </p>
+                    <ul style="color: #555;">
+                    <li>Sleeps up to 2 guests</li>
+                    <li>Queen-size bed</li>
+                    <li>Partial sea view</li>
+                    <li>Air conditioning &amp; mini fridge</li>
+                    </ul>
+
+                    <h6 style="color: #1a1a2e; margin-top: 20px;">Add Services</h6>
+                    <div class="row">
+                    <div class="col-6">
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="doubleService1"><label class="form-check-label" for="doubleService1">Beach Access</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="doubleService2"><label class="form-check-label" for="doubleService2">Swimming Pool</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="doubleService3"><label class="form-check-label" for="doubleService3">Room Service</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="doubleService4"><label class="form-check-label" for="doubleService4">Restaurant &amp; Bar</label></div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="doubleService5"><label class="form-check-label" for="doubleService5">Free Wi-Fi</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="doubleService6"><label class="form-check-label" for="doubleService6">Laundry Services</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="doubleService7"><label class="form-check-label" for="doubleService7">Housekeeping</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="doubleService8"><label class="form-check-label" for="doubleService8">24/7 Front Desk</label></div>
+                    </div>
+                    </div>
+                </div>
+
+                </div>
+
+                <div class="row justify-content-center mt-3">
+                <div class="col-md-10 p-4 rounded shadow">
+                    <div class="row g-3 align-items-end">
+                    <div class="col-md-3">
+                        <label class="form-label">Check-In</label>
+                        <input type="date" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Check-Out</label>
+                        <input type="date" class="form-control">
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Guests</label>
+                        <input type="number" class="form-control" min="1" value="1">
+                    </div>
+                    <div class="col-md-2">
+                        <button type="button" class="btn w-100" style="background-color: #1a1a2e; color: #ffffff;">Check Availability</button>
+                    </div>
+                    <div class="col-md-2">
+                        <button type="button" class="btn w-100" style="background-color: #d4af37; color: #1a1a2e; font-weight: 600;">Book Now</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
+            </div>
+
+            <!-- TRIPLE ROOM -->
+            <div class="tab-pane fade" id="tripleRoom">
+                <div class="row">
+
+                <div class="col-md-6 mb-4">
+                    <div id="tripleCarousel" class="carousel slide shadow rounded" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                        <img src="../images/tripleroom1.webp" class="d-block w-100" alt="Triple room image 1" style="height: 350px; object-fit: cover;">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="../images/tripleroom2.webp" class="d-block w-100" alt="Triple room image 2" style="height: 350px; object-fit: cover;">
+                        </div>
+                        <div class="carousel-item">
+                        <img src="../images/tripleroom3.webp" class="d-block w-100" alt="Triple room image 3" style="height: 350px; object-fit: cover;">
+                        </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#tripleCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#tripleCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                    </div>
+                </div>
+
+                <div class="col-md-6 mb-4">
+                    <h3 style="color: #1a1a2e;">Triple Room</h3>
+                    <p style="color: #d4af37; font-weight: 700; font-size: 20px;">2 rooms available</p>
+                    <p style="color: #555;">
+                    Roomy and practical, our Triple Rooms are great for small families or groups of
+                    friends wanting to stay together without compromising on comfort.
+                    </p>
+                    <ul style="color: #555;">
+                    <li>Sleeps up to 3 guests</li>
+                    <li>One double bed &amp; one single bed</li>
+                    <li>Garden view</li>
+                    <li>Air conditioning</li>
+                    </ul>
+
+                    <h6 style="color: #1a1a2e; margin-top: 20px;">Add Services</h6>
+                    <div class="row">
+                    <div class="col-6">
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="tripleService1"><label class="form-check-label" for="tripleService1">Beach Access</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="tripleService2"><label class="form-check-label" for="tripleService2">Swimming Pool</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="tripleService3"><label class="form-check-label" for="tripleService3">Room Service</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="tripleService4"><label class="form-check-label" for="tripleService4">Restaurant &amp; Bar</label></div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="tripleService5"><label class="form-check-label" for="tripleService5">Free Wi-Fi</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="tripleService6"><label class="form-check-label" for="tripleService6">Laundry Services</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="tripleService7"><label class="form-check-label" for="tripleService7">Housekeeping</label></div>
+                        <div class="form-check"><input class="form-check-input" type="checkbox" id="tripleService8"><label class="form-check-label" for="tripleService8">24/7 Front Desk</label></div>
+                    </div>
+                    </div>
+                </div>
+
+                </div>
+
+                <div class="row justify-content-center mt-3">
+                <div class="col-md-10 p-4 rounded shadow">
+                    <div class="row g-3 align-items-end">
+                    <div class="col-md-3">
+                        <label class="form-label">Check-In</label>
+                        <input type="date" class="form-control">
+                    </div>
+                    <div class="col-md-3">
+                        <label class="form-label">Check-Out</label>
+                        <input type="date" class="form-control">
+                    </div>
+                    <div class="col-md-2">
+                        <label class="form-label">Guests</label>
+                        <input type="number" class="form-control" min="1" value="1">
+                    </div>
+                    <div class="col-md-2">
+                        <button type="button" class="btn w-100" style="background-color: #1a1a2e; color: #ffffff;">Check Availability</button>
+                    </div>
+                    <div class="col-md-2">
+                        <button type="button" class="btn w-100" style="background-color: #d4af37; color: #1a1a2e; font-weight: 600;">Book Now</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
+        <!--Body: STARTS-->
+
+        <!--Footer: STARTS -->
+        <footer style="background-color: #1a1a2e; padding: 30px 0;">
+            <div class="container text-center">
+                <div class="mb-2">
+                <a href="../footer/abtus.html" style="color: #f5f5f5; text-decoration: none;">About Us</a>
+                </div>
+                <div class="mb-2">
+                <a href="../footer/contactus.html" style="color: #f5f5f5; text-decoration: none;">Contact Us</a>
+                </div>
+                <div class="mb-2">
+                <a href="../footer/faqs.html" style="color: #f5f5f5; text-decoration: none;">FAQs</a>
+                </div>
+                <div class="mb-2">
+                <a href="../footer/privacypolicy.html" style="color: #f5f5f5; text-decoration: none;">Privacy Policy</a>
+                </div>
+                <div class="mb-3">
+                <a href="../footer/termsncond.html" style="color: #f5f5f5; text-decoration: none;">Terms and Conditions</a>
+                </div>
+                <p style="color: #cccccc; font-size: 13px; margin-bottom: 0;">
+                &copy; Shimra Ahamed 2026
+                </p>
+            </div>
+        </footer>
+        <!--Footer: ENDS -->
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    </body>
+</html>
